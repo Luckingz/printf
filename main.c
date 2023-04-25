@@ -18,12 +18,9 @@ int _printf(const char *format, ...)
 	char *s;
 
 	while (*format)
-	{
 		if (*format == '%')
-		{
 			format++;
 			switch (*format)
-			{
 				case 'c':
 					c = va_arg(ap, int);
 					_putchar(c);
@@ -35,8 +32,7 @@ int _printf(const char *format, ...)
 						s = "(null)";
 					while (*s)
 						_putcharr(*s);
-						s++;
-						index++;
+						s++, index++;
 					break;
 				case '%':
 					_putchar('%');
@@ -47,13 +43,10 @@ int _printf(const char *format, ...)
 					_putchar(*format);
 					index += 2;
 					break;
-			}
-		}
 		else
 			_putchar(*format);
 			index++;
 		format++;
-	}
 	va_end(ap);
 	return (index);
 }
