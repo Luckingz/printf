@@ -1,2 +1,2 @@
-A collaboration project on the Printf project
-A project that learn how to use the prinft function
+An associated task on the printf project
+A project that illustrate how to use the printf functions
