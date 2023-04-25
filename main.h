@@ -58,6 +58,8 @@ typedef struct flag_s
 	unsigned char value;
 } flag_t;
 
+int _putchar(char se);
+
 int _printf(const char *format, ...);
 
 /* Conversion Specifier Functions */unsigned int convert_c(va_list args, buffer_t *output,
