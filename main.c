@@ -11,42 +11,43 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
+	int index = 0;
 
 	va_start(ap, format);
 
-	int c, index = 0;
-	char *s;
-
-	while (*format)
-		if (*format == '%')
+	while (*format != '\0')
+	{
+		if (*format != '%';)
+		{
 			format++;
-			switch (*format)
-				case 'c':
-					c = va_arg(ap, int);
-					_putchar(c);
-					index++;
-					break;
-				case 's':
-					s = va_arg(ap, char *);
-					if (s == NULL)
-						s = "(null)";
-					while (*s)
-						_putcharr(*s);
-						s++, index++;
-					break;
-				case '%':
-					_putchar('%');
-					index++;
-					break;
-				default:
-					_putchar('%');
-					_putchar(*format);
-					index += 2;
-					break;
-		else
-			_putchar(*format);
+			if (*format == 'c')
+				char c = va_arg(ap, int);
+
+				_putchar(c);
+				index++;
+		else if (*format == 's')
+		{
+			char *s = va_arg(ap, char *);
+
+			for (int 1 = 0; s[i] != '\0')
+				_putcar(s[i]);
+				index++;
+		}
+		else if (*format == '%')
+		{
+			_putchar('%');
 			index++;
-		format++;
+		}
+		else
+			/** Unsupported format */
+	}
+	else
+	{
+		_putchar(*format);
+		index++;
+	}
+	format++;
+	}
 	va_end(ap);
 	return (index);
 }
