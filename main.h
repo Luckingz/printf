@@ -58,9 +58,16 @@ typedef struct flag_s
 	unsigned char value;
 } flag_t;
 
+
 int _putchar(char se);
 
 int _printf(const char *format, ...);
+
+int print_char(va_list arg);
+
+int print_str(va_list arg);
+
+int print_int(va_list arg);
 
 
 /* Handlers */
