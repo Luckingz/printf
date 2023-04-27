@@ -19,7 +19,7 @@
 #define NEG_FLAG ((flags >> 4) & 1)
 
 /* Length Modifier Macros */
-#deine SHORT 1
+#define SHORT 1
 #define LONG 2
 
 /**
@@ -62,32 +62,6 @@ int _putchar(char se);
 
 int _printf(const char *format, ...);
 
-/* Conversion Specifier Functions */unsigned int convert_c(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_s(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_di(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_percent(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_b(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_u(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_o(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_x(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_X(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_S(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_p(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_r(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_R(va_list args, buffer_t, *output,
-		unsigned char flags, int wid, int prec, unsigned char len);
 
 /* Handlers */
 unsigned char handle_flags(const char *flags, char *index);
